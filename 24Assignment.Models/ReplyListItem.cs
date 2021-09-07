@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _24Assignment.Services
+namespace _24Assignment.Models
 {
-    public class Class1
+    public class ReplyListItem
     {
+        public string Text { get; set; }
     }
 }
