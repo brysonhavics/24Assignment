@@ -5,18 +5,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _24Assignment.Data
+namespace _24Assignment.Models
 {
-    public class Comment
+    public class CommentCreate
     {
-        [Key]
-        public int CommentId { get; set; }
         [Required]
+        [MinLength(2, ErrorMessage ="Enter at least two characters")]
+        [MaxLength(800, ErrorMessage ="There are too many character in this field")]
         public string Text { get; set; }
-        [Required]
-        public Guid AuthorId { get; set; }
+        
         public int PostId { get; set; }
-        public virtual List<Reply> Replies { get; set; }
-
     }
 }
