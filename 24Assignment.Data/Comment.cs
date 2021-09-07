@@ -17,5 +17,7 @@ namespace _24Assignment.Data
         public Guid AuthorId { get; set; }
         public int PostId { get; set; }
         
+
     }
 }
+  
