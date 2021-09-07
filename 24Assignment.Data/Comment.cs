@@ -15,7 +15,6 @@ namespace _24Assignment.Data
         public string Text { get; set; }
         [Required]
         public Guid AuthorId { get; set; }
-        public int PostId { get; set; }
-        
+        public int PostId { get; set; }  
     }
 }

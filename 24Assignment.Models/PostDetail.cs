@@ -1,27 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using _24Assignment.Data;
 
-namespace _24Assignment.Data
+namespace _24Assignment.Models
 {
-    public class Post
+    public class PostDetail
     {
-        [Key]
         public int PostId { get; set; }
-
-        [Required]
         public string Title { get; set; }
-
-        [Required]
         public string Text { get; set; }
-
+        //public virtual List<Comment> Comments { get; set; }
+        // publci virtual List<Like> Likes { get; set; }
         public Guid AuthorId { get; set; }
-
-        public virtual List<Comment> Comments { get; set; }
-
-        //public virtual List<Like> Likes { get; set; }
     }
 }
