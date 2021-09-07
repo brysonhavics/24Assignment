@@ -16,6 +16,7 @@ namespace _24Assignment.Data
         [Required]
         public Guid AuthorId { get; set; }
         public int PostId { get; set; }
-        
+        public virtual List<Reply> Replies { get; set; }
+
     }
 }
