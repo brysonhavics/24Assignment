@@ -1,0 +1,16 @@
+C:\Users\bryso\source\repos\24Assignment\24Assignment.Services\bin\Debug\24Assignment.Services.dll.config
+C:\Users\bryso\source\repos\24Assignment\24Assignment.Services\bin\Debug\24Assignment.Services.dll
+C:\Users\bryso\source\repos\24Assignment\24Assignment.Services\bin\Debug\24Assignment.Services.pdb
+C:\Users\bryso\source\repos\24Assignment\24Assignment.Services\bin\Debug\EntityFramework.dll
+C:\Users\bryso\source\repos\24Assignment\24Assignment.Services\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\bryso\source\repos\24Assignment\24Assignment.Services\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\bryso\source\repos\24Assignment\24Assignment.Services\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\bryso\source\repos\24Assignment\24Assignment.Services\bin\Debug\EntityFramework.xml
+C:\Users\bryso\source\repos\24Assignment\24Assignment.Services\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\bryso\source\repos\24Assignment\24Assignment.Services\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\bryso\source\repos\24Assignment\24Assignment.Services\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\bryso\source\repos\24Assignment\24Assignment.Services\obj\Debug\24Assignment.Services.csproj.AssemblyReference.cache
+C:\Users\bryso\source\repos\24Assignment\24Assignment.Services\obj\Debug\24Assignment.Services.csproj.CoreCompileInputs.cache
+C:\Users\bryso\source\repos\24Assignment\24Assignment.Services\obj\Debug\24Assignment.Services.csproj.CopyComplete
+C:\Users\bryso\source\repos\24Assignment\24Assignment.Services\obj\Debug\24Assignment.Services.dll
+C:\Users\bryso\source\repos\24Assignment\24Assignment.Services\obj\Debug\24Assignment.Services.pdb
