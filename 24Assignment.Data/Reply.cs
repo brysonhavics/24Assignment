@@ -11,6 +11,6 @@ namespace _24Assignment.Data
         public int ReplyId { get; set; }
         public int CommentId { get; set; }
         public string Text { get; set; }
-        public Guid AuthoerId { get; set; }
+        public Guid AuthorId { get; set; }
     }
 }
