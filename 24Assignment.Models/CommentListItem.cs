@@ -8,6 +8,7 @@ namespace _24Assignment.Models
 {
     public class CommentListItem
     {
-
+        public int UserId { get; set; }
+        public string Text { get; set; }
     }
 }
