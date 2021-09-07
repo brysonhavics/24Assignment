@@ -27,9 +27,25 @@ namespace _24Assignment.Services
             return _context.SaveChanges() == 1;
         }
 
-        public IEnumerable<CommentListItem> GetCommentsById()
+        public IEnumerable<CommentListItem> GetCommentsById(int postId)
         {
+            List<CommentListItem> comments = _context.Comments
+                .Where(c => c.PostId == postId)
+                .Select(t => new CommentListItem()
+                {
+                    Text = t.Text,
+                    UserId = t.CommentId,
+                }).ToList();
 
+            return comments;
+        }
+
+        public IEnumerable<CommentListItem> GetCommentsByAuthor()
+        {
+            List<CommentListItem> comments = _context.Comments
+                .Where(c => c.AuthorId == _userId).Select(t => new CommentListItem() { Text = t.Text, UserId = t.CommentId, }).ToList();
+
+            return comments;
         }
     }
 }

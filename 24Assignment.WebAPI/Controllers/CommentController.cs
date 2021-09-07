@@ -27,15 +27,28 @@ namespace _24Assignment.WebAPI.Controllers
 
             return Ok();
         }
-
         
         [HttpGet]
-        public IHttpActionResult GetCommentByPostId(int Postid)
+        [Route("api/Comment/Post/{id}")]
+        public IHttpActionResult GetCommentByPostId(int postId)
         {
             CommentService commentService = CreateCommentService();
-            var comments = commentService.
+            var comments = commentService.GetCommentsById(postId);
+            return Ok(comments);
         }
         
+        [HttpGet]
+        [Route("api/Comment/AuthorId/")]
+        public IHttpActionResult GetCommentByAuthorId()
+        {
+            CommentService commentService = CreateCommentService();
+            var comments = commentService.GetCommentsByAuthor();
+
+            return Ok();
+        }
+
+
+
         private CommentService CreateCommentService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
