@@ -1,16 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _24Assignment.Data
+namespace _24Assignment.Models
 {
-    public class Reply
+    public class ReplyCreate
     {
-        public int ReplyId { get; set; }
+        [Required]
         public int CommentId { get; set; }
+        [Required]
         public string Text { get; set; }
-        public Guid AuthorId { get; set; }
+
     }
 }
