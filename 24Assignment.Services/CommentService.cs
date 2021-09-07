@@ -12,6 +12,8 @@ namespace _24Assignment.Services
     {
         private readonly Guid _userId;
 
+        private ApplicationDbContext _context = new ApplicationDbContext();
+
         public CommentService(Guid userId)
         {
             _userId = userId;
@@ -19,7 +21,15 @@ namespace _24Assignment.Services
 
         public bool CreateComment(CommentCreate model)
         {
-            var entity = new Comment() 
+            var entity = new Comment() { AuthorId = _userId, PostId = model.PostId, Text = model.Text };
+
+            _context.Comments.Add(entity);
+            return _context.SaveChanges() == 1;
+        }
+
+        public IEnumerable<CommentListItem> GetCommentsById()
+        {
+
         }
     }
 }
