@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _24Assignment.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,5 +11,6 @@ namespace _24Assignment.Models
     {
         public int UserId { get; set; }
         public string Text { get; set; }
+        public List<Reply> Replies { get; set; }
     }
 }

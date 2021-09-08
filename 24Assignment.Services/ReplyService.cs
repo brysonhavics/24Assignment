@@ -23,8 +23,11 @@ namespace _24Assignment.Services
         public bool CreateReply(ReplyCreate model)
         {
             var entity = new Reply() { AuthorId = _userId, CommentId = model.CommentId, Text = model.Text };
+            Comment comment = _context.Comments.Find(model.CommentId);
+            comment.Replies.Add(entity);
 
             _context.Replies.Add(entity);
+            
             return _context.SaveChanges() == 1;
         }
 

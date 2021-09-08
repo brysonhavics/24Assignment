@@ -39,17 +39,33 @@ namespace _24Assignment.Services
             }
         }
 
+        public IEnumerable<LikeListItem> LikeListItems()
+        {
+            var service = new LikeService(_userId);
+            IEnumerable<LikeListItem> likeLists = service.GetLikes();
+            return likeLists;
+        }
+
+
         public PostDetail GetPostById(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity = ctx.Posts.Single(e => e.PostId == id && e.AuthorId == _userId);
+
+                var commentService = new CommentService(_userId);
+                IEnumerable<CommentListItem> commentList = commentService.GetCommentsById(entity.PostId);
+
+                var likeLists = LikeListItems();
+
                 return new PostDetail
                 {
                     PostId = entity.PostId,
                     Title = entity.Title,
                     Text = entity.Text,
-                    AuthorId = entity.AuthorId
+                    AuthorId = entity.AuthorId,
+                    Likes = likeLists.Count(),
+                    CommentsList = (List<CommentListItem>) commentList,
                 };
             }
         }
