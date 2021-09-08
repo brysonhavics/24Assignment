@@ -12,6 +12,5 @@ namespace _24Assignment.Models
         public Guid OwnerId { get; set; }
         public int Id { get; set; }
 
-
     }
 }

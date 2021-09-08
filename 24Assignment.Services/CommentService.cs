@@ -34,7 +34,8 @@ namespace _24Assignment.Services
                 .Select(t => new CommentListItem()
                 {
                     Text = t.Text,
-                    UserId = t.CommentId,
+                    CommentId = t.CommentId,
+                    Replies = t.Replies,
                 }).ToList();
 
             return comments;
@@ -43,7 +44,7 @@ namespace _24Assignment.Services
         public IEnumerable<CommentListItem> GetCommentsByAuthor()
         {
             List<CommentListItem> comments = _context.Comments
-                .Where(c => c.AuthorId == _userId).Select(t => new CommentListItem() { Text = t.Text, UserId = t.CommentId, }).ToList();
+                .Where(c => c.AuthorId == _userId).Select(t => new CommentListItem() { Text = t.Text, CommentId = t.CommentId, Replies = t.Replies}).ToList();
 
             return comments;
         }
