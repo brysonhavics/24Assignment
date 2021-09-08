@@ -54,12 +54,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="CommentService.cs" />
+    <Compile Include="PostService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReplyService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\24Assignment.Data\24Assignment.Data.csproj">
+      <Project>{B6BE393E-8F64-4D35-B175-A54AF52E16C1}</Project>
+      <Name>24Assignment.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\24Assignment.Models\24Assignment.Models.csproj">
+      <Project>{88A7AD93-3823-4898-8C35-E2D3A3CC8842}</Project>
+      <Name>24Assignment.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
