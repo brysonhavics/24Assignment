@@ -9,7 +9,7 @@ namespace _24Assignment.Models
 {
     public class CommentListItem
     {
-        public int UserId { get; set; }
+        public int CommentId { get; set; }
         public string Text { get; set; }
         public List<Reply> Replies { get; set; }
     }
