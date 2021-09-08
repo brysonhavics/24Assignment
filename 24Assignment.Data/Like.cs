@@ -12,11 +12,10 @@ namespace _24Assignment.Data
         public Guid OwnerId { get; set; }
         public int Id { get; set; }
 
-        [ForeignKey(nameof(Post))]
-
+        //[ForeignKey(nameof(Post))]
         public int PostId { get; set; }
 
-        // public virtual List<Post> Posts { get; set; }
+        public virtual List<Post> Posts { get; set; }
     }
 
 

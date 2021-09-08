@@ -9,10 +9,8 @@ namespace _24Assignment.Models
 {
     public class LikeCreate
     {
-
-        [Required]
         public Guid OwnerId { get; set; }
+        [Required]
         public int PostId { get; set; }
-
     }
 }
