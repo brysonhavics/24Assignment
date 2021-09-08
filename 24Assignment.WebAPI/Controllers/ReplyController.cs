@@ -36,10 +36,10 @@ namespace _24Assignment.WebAPI.Controllers
 
 
         [HttpGet]
-        public IHttpActionResult GetRepliesByCommentId(int commentId)
+        public IHttpActionResult GetRepliesByCommentId(int id)
         {
             ReplyService replyService = CreateReplyService();
-            var comments = replyService.GetReplies(commentId);
+            var comments = replyService.GetReplies(id);
             return Ok(comments);
         }
 

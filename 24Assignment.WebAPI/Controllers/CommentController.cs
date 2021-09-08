@@ -30,10 +30,10 @@ namespace _24Assignment.WebAPI.Controllers
         
         [HttpGet]
         [Route("api/Comment/Post/{id}")]
-        public IHttpActionResult GetCommentByPostId(int postId)
+        public IHttpActionResult GetCommentByPostId(int id)
         {
             CommentService commentService = CreateCommentService();
-            var comments = commentService.GetCommentsById(postId);
+            var comments = commentService.GetCommentsById(id);
             return Ok(comments);
         }
         
