@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace _24Assignment.Services
 {
     public class Class1
-    {
+    { 
+        public string Like { get; set; }
     }
 }
